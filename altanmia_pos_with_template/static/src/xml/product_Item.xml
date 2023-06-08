@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('product-img')]" position="replace">
+            <div class="product-img">
+                <i role="img" aria-label="Info" title="Info" class="product-info-button fa fa-info-circle"
+                    t-on-click.stop="onProductInfoClick()"/>
+                <img t-att-src="tempImageUrl()" t-att-alt="props.product.display_name" />
+<!--                <span class="price-tag">-->
+<!--                    <t t-esc="price" />-->
+<!--                </span>-->
+            </div>
+        </xpath>
+    </t>
+
+</templates>
